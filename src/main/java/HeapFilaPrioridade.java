@@ -18,4 +18,14 @@ public class HeapFilaPrioridade implements FilaPrioridade {
 		return this.heap.getRaiz();
 	}
 
+	public static void main(String[] args) {
+		heap.add("a", 1);
+		heap.add("b", 2);
+		heap.add("c", 3);
+		heap.add("d", 4);
+		heap.add("e", 5);
+
+		System.out.println(this.heap.removeNext());
+	}
+
 }

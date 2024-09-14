@@ -17,10 +17,16 @@ public class InsereFinalFilaPrioridade implements FilaPrioridade {
 
 	// buscar pelo elemento de maior prioridade na fila.
 	public String removeNext() {
-		String s = "";
+		Pair maiorP = null;
 
-		for (int i = 0; i < fila.size(); i++) {
-			
+		for (Pair p: fila) {
+			if (maiorP == null || p.getPrioridade() > maiorP.getPrioridade()) {
+				maiorP = p;
+			}
+
 		}
+		fila.remove(maiorP);	
+		return maiorP.getElemento();
+
 	}
 }
